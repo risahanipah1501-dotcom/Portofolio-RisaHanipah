@@ -92,7 +92,7 @@ export const HeroSection: React.FC = () => {
           />
           <StatsCard
             icon={<Camera className="w-5 h-5 text-blue-700" />}
-            value="68+ Foto & 7 Video"
+            value="71 Foto & 8 Video"
             label="Koleksi Media High-Res"
           />
           <StatsCard

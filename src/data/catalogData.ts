@@ -65,17 +65,19 @@ export const CATALOG_DATA: CatalogItem[] = [
       "Catalog"
     ],
     "coverImage": "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.55 (1).jpeg",
-    "imagesCount": 5,
+    "imagesCount": 6,
     "images": [
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.55 (1).jpeg",
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.55 (2).jpeg",
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.55.jpeg",
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.57 (2).jpeg",
-      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.57 (3).jpeg"
+      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.57 (3).jpeg",
+      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-21 at 11.05.43.jpeg"
     ],
-    "videosCount": 1,
+    "videosCount": 2,
     "videos": [
-      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Video 2026-08-21 at 10.20.36.mp4"
+      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Video 2026-08-21 at 10.20.36.mp4",
+      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Video 2026-08-21 at 11.05.43.mp4"
     ]
   },
   {
@@ -346,12 +348,14 @@ export const CATALOG_DATA: CatalogItem[] = [
       "Risa"
     ],
     "coverImage": "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.19 (1).jpeg",
-    "imagesCount": 4,
+    "imagesCount": 6,
     "images": [
       "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.19 (1).jpeg",
       "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.19.jpeg",
       "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.20.jpeg",
-      "/Katalog/Self_Makeup/WhatsApp Image 2026-08-19 at 11.42.56.jpeg"
+      "/Katalog/Self_Makeup/WhatsApp Image 2026-08-19 at 11.42.56.jpeg",
+      "/Katalog/Self_Makeup/WhatsApp Image 2026-08-21 at 11.05.41.jpeg",
+      "/Katalog/Self_Makeup/WhatsApp Image 2026-08-21 at 11.05.42.jpeg"
     ],
     "videosCount": 0,
     "videos": []
