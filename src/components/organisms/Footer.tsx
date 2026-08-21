@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="pt-1 flex items-center gap-3 flex-wrap">
               <a
-                href="https://wa.me/6285174232225?text=Halo%20Risa%20Hanipah,%20saya%20tertarik%20berkolaborasi%20untuk%20sesi%20foto%20/%20MUA"
+                href="https://wa.me/6285174232225?text=Halo%20Risa%20Hanipah%2C%20saya%20tertarik%20berkolaborasi%20untuk%20sesi%20Foto%20Produk%2FMuse%20Makeup..%20Boleh%20berbicara%20sebentar%20untuk%20disscus%3F%20%F0%9F%98%89%F0%9F%92%96"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-extrabold px-4 py-2 rounded-full bg-emerald-500 text-white shadow-md shadow-emerald-500/20 hover:bg-emerald-600 transition-all"

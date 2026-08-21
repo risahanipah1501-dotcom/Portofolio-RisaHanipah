@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
         {/* Contact/Booking Action */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://wa.me/6285174232225?text=Halo%20Risa%20Hanipah,%20saya%20tertarik%20berkolaborasi%20untuk%20sesi%20foto%20/%20MUA"
+            href="https://wa.me/6285174232225?text=Halo%20Risa%20Hanipah%2C%20saya%20tertarik%20berkolaborasi%20untuk%20sesi%20Foto%20Produk%2FMuse%20Makeup..%20Boleh%20berbicara%20sebentar%20untuk%20disscus%3F%20%F0%9F%98%89%F0%9F%92%96"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs shadow-md shadow-emerald-500/20 transition-all hover:scale-105"
