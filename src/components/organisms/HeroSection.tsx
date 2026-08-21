@@ -3,10 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Sparkles, FolderHeart, Camera, Flower2, MessageCircle, ArrowRight } from 'lucide-react';
+import { Sparkles, FolderHeart, MessageCircle, ArrowRight } from 'lucide-react';
 import { Heading } from '@/components/atoms/Heading';
 import { Button } from '@/components/atoms/Button';
-import { StatsCard } from '@/components/molecules/StatsCard';
 import { FloatingClouds } from '@/components/atoms/FloatingClouds';
 
 export const HeroSection: React.FC = () => {
@@ -77,31 +76,8 @@ export const HeroSection: React.FC = () => {
             </Button>
           </Link>
         </motion.div>
-
-        {/* Metric Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-3xl"
-        >
-          <StatsCard
-            icon={<FolderHeart className="w-5 h-5 text-purple-700" />}
-            value="13"
-            label="Folder Portofolio"
-          />
-          <StatsCard
-            icon={<Camera className="w-5 h-5 text-blue-700" />}
-            value="71 Foto & 8 Video"
-            label="Koleksi Media High-Res"
-          />
-          <StatsCard
-            icon={<Flower2 className="w-5 h-5 text-pink-700" />}
-            value="10+"
-            label="MUA Collaborations"
-          />
-        </motion.div>
       </div>
     </section>
   );
 };
+
