@@ -19,7 +19,9 @@ export const VideoTile: React.FC<VideoTileProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
+      whileHover={{ y: -4, scale: 1.01 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.25, delay: index * 0.04 }}
       className="group relative rounded-2xl overflow-hidden glass-panel border border-purple-200/90 shadow-lg bg-slate-950"
     >
       <div className="relative w-full aspect-[9/16] sm:aspect-[3/4] overflow-hidden bg-slate-950 flex items-center justify-center">

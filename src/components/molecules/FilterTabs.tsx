@@ -24,10 +24,12 @@ export const FilterTabs: React.FC<FilterTabsProps> = ({ catalogItems = [] }) => 
         const count = catalogItems.length > 0 ? getItemCount(category.id as CategoryType) : null;
 
         return (
-          <button
+          <motion.button
             key={category.id}
+            whileTap={{ scale: 0.94 }}
+            transition={{ type: 'spring', stiffness: 450, damping: 25 }}
             onClick={() => setActiveCategory(category.id as CategoryType)}
-            className={`relative px-4 py-2 text-xs md:text-sm font-bold rounded-full transition-colors whitespace-nowrap focus:outline-none ${
+            className={`relative px-4 py-2 text-xs md:text-sm font-bold rounded-full transition-colors whitespace-nowrap focus:outline-none select-none ${
               isActive ? 'text-white font-extrabold' : 'text-slate-700 hover:text-slate-950'
             }`}
           >
@@ -50,7 +52,7 @@ export const FilterTabs: React.FC<FilterTabsProps> = ({ catalogItems = [] }) => 
                 </span>
               )}
             </span>
-          </button>
+          </motion.button>
         );
       })}
     </div>

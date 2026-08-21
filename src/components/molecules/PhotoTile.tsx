@@ -18,8 +18,10 @@ export const PhotoTile: React.FC<PhotoTileProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.04 }}
-      className="group relative rounded-2xl overflow-hidden glass-panel border border-slate-800/80 shadow-xl bg-surface-light"
+      whileHover={{ y: -4, scale: 1.01 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.25, delay: index * 0.03 }}
+      className="group relative rounded-2xl overflow-hidden glass-panel border border-slate-800/80 shadow-xl bg-surface-light cursor-pointer"
     >
       <div className="relative w-full aspect-[3/4] overflow-hidden">
         <img

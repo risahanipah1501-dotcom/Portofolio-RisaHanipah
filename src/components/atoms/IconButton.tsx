@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IconButtonProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
   children: React.ReactNode;
   variant?: 'solid' | 'ghost' | 'glass';
   size?: 'sm' | 'md' | 'lg';
@@ -15,7 +18,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
   className,
   ...props
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center rounded-full transition-all duration-200 focus:outline-none active:scale-90';
+  const baseStyles = 'inline-flex items-center justify-center rounded-full transition-all duration-200 focus:outline-none select-none';
 
   const variants = {
     solid: 'bg-accent-gold text-background hover:bg-accent-gold-light shadow-md',
@@ -30,11 +33,15 @@ export const IconButton: React.FC<IconButtonProps> = ({
   };
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.88 }}
+      transition={{ type: 'spring', stiffness: 500, damping: 22 }}
       className={twMerge(clsx(baseStyles, variants[variant], sizes[size], className))}
       {...props}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
+
