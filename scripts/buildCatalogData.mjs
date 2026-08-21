@@ -108,15 +108,21 @@ function slugify(text) {
 
 const catalogData = folders.map(folderName => {
   const folderPath = path.join(catalogDir, folderName);
-  const images = fs.readdirSync(folderPath)
+  const files = fs.readdirSync(folderPath);
+  
+  const images = files
     .filter(file => /\.(jpe?g|png|webp|svg)$/i.test(file))
+    .map(file => `/Katalog/${folderName}/${file}`);
+
+  const videos = files
+    .filter(file => /\.(mp4|webm|mov|mkv)$/i.test(file))
     .map(file => `/Katalog/${folderName}/${file}`);
 
   const meta = folderMeta[folderName] || {
     title: folderName.replace(/_/g, ' '),
     category: 'other',
     categoryLabel: 'Lainnya',
-    description: `Koleksi foto ${folderName}`,
+    description: `Koleksi ${folderName}`,
     tags: [folderName]
   };
 
@@ -132,7 +138,9 @@ const catalogData = folders.map(folderName => {
     tags: meta.tags,
     coverImage: images[0] || '',
     imagesCount: images.length,
-    images: images
+    images: images,
+    videosCount: videos.length,
+    videos: videos
   };
 });
 
@@ -148,6 +156,8 @@ export interface CatalogItem {
   coverImage: string;
   imagesCount: number;
   images: string[];
+  videosCount: number;
+  videos: string[];
 }
 
 export const CATALOG_DATA: CatalogItem[] = ${JSON.stringify(catalogData, null, 2)};
@@ -161,4 +171,5 @@ export const CATEGORIES = [
 `;
 
 fs.writeFileSync(path.join(process.cwd(), 'src', 'data', 'catalogData.ts'), content);
-console.log(`Successfully generated catalogData.ts with ${catalogData.length} folders and ${catalogData.reduce((acc, curr) => acc + curr.imagesCount, 0)} total images!`);
+console.log(`Successfully generated catalogData.ts with ${catalogData.length} folders, ${catalogData.reduce((acc, curr) => acc + curr.imagesCount, 0)} total images, and ${catalogData.reduce((acc, curr) => acc + curr.videosCount, 0)} total videos!`);
+

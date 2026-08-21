@@ -37,8 +37,8 @@ export default function AboutPage() {
               <div className="text-xs text-slate-700 font-bold">Total Project Folder</div>
             </div>
             <div className="p-4 rounded-2xl glass-panel border border-purple-200 shadow-sm bg-white/90">
-              <div className="text-2xl font-black gold-gradient-text font-mono">68+</div>
-              <div className="text-xs text-slate-700 font-bold">Koleksi Foto High-Res</div>
+              <div className="text-xl sm:text-2xl font-black gold-gradient-text font-mono">68 Foto & 7 Video</div>
+              <div className="text-xs text-slate-700 font-bold">Koleksi Media High-Res</div>
             </div>
           </div>
 

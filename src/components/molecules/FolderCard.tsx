@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FolderOpen, ArrowRight, Camera, Sparkles } from 'lucide-react';
+import { FolderOpen, ArrowRight, Camera, Sparkles, Video } from 'lucide-react';
 import { CatalogItem } from '@/data/catalogData';
 import { Badge } from '@/components/atoms/Badge';
 import { LazyImage } from '@/components/atoms/LazyImage';
@@ -27,10 +27,18 @@ export const FolderCard: React.FC<FolderCardProps> = ({ item }) => {
       {/* Top Header Badge & Info */}
       <div className="p-4 flex items-center justify-between border-b border-purple-100 bg-white/70">
         <Badge category={item.category} />
-        <span className="text-xs font-mono text-purple-900 font-extrabold px-3 py-1 rounded-full bg-purple-100 border border-purple-200 flex items-center gap-1">
-          <Camera className="w-3.5 h-3.5 text-purple-700" />
-          {item.imagesCount} Foto
-        </span>
+        <div className="flex items-center gap-1.5">
+          <span className="text-xs font-mono text-purple-900 font-extrabold px-3 py-1 rounded-full bg-purple-100 border border-purple-200 flex items-center gap-1">
+            <Camera className="w-3.5 h-3.5 text-purple-700" />
+            {item.imagesCount} Foto
+          </span>
+          {item.videosCount > 0 && (
+            <span className="text-xs font-mono text-blue-900 font-extrabold px-3 py-1 rounded-full bg-blue-100 border border-blue-200 flex items-center gap-1">
+              <Video className="w-3.5 h-3.5 text-blue-700" />
+              {item.videosCount} Video
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Main Large Photo Preview */}
@@ -89,7 +97,9 @@ export const FolderCard: React.FC<FolderCardProps> = ({ item }) => {
             className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl cheerful-blue-purple-bg text-white font-extrabold text-xs shadow-md shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]"
           >
             <FolderOpen className="w-4 h-4" />
-            <span>Buka Dan Lihat {item.imagesCount} Foto Lengkap</span>
+            <span>
+              Buka Dan Lihat {item.imagesCount} Foto{item.videosCount > 0 ? ` & ${item.videosCount} Video` : ''} Lengkap
+            </span>
           </Link>
         </div>
       </div>

@@ -3,12 +3,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Sparkles, FolderHeart, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, Sparkles, FolderHeart, Image as ImageIcon, Video } from 'lucide-react';
 import { CatalogItem } from '@/data/catalogData';
 import { Breadcrumb } from '@/components/molecules/Breadcrumb';
 import { Badge } from '@/components/atoms/Badge';
 import { Heading } from '@/components/atoms/Heading';
 import { PhotoTile } from '@/components/molecules/PhotoTile';
+import { VideoTile } from '@/components/molecules/VideoTile';
 
 interface FolderDetailTemplateProps {
   item: CatalogItem;
@@ -47,10 +48,18 @@ export const FolderDetailTemplate: React.FC<FolderDetailTemplateProps> = ({
       >
         <div className="flex flex-wrap items-center justify-between gap-3">
           <Badge category={item.category} />
-          <span className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold px-3 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-200">
-            <ImageIcon className="w-3.5 h-3.5 text-purple-700" />
-            Total {item.imagesCount} Foto Terpasang Langsung
-          </span>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold px-3 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-200">
+              <ImageIcon className="w-3.5 h-3.5 text-purple-700" />
+              Total {item.imagesCount} Foto
+            </span>
+            {item.videos && item.videos.length > 0 && (
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold px-3 py-1 rounded-full bg-blue-100 text-blue-900 border border-blue-200">
+                <Video className="w-3.5 h-3.5 text-blue-700" />
+                Total {item.videos.length} Video
+              </span>
+            )}
+          </div>
         </div>
 
         <Heading as="h1" goldGradient className="flex items-center gap-2">
@@ -72,6 +81,32 @@ export const FolderDetailTemplate: React.FC<FolderDetailTemplateProps> = ({
           ))}
         </div>
       </motion.div>
+
+      {/* Direct Videos Gallery Display (if folder has videos) */}
+      {item.videos && item.videos.length > 0 && (
+        <div className="space-y-6">
+          <div className="flex items-center justify-between pb-4 border-b border-purple-200">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <Video className="w-5 h-5 text-blue-600" />
+              Video Dokumentasi Dalam Folder ({item.videos.length} Video)
+            </h2>
+            <span className="text-xs text-slate-600 font-mono font-bold">
+              Menampilkan {item.videos.length} dari {item.videos.length} Video
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {item.videos.map((vidSrc, index) => (
+              <VideoTile
+                key={index}
+                src={vidSrc}
+                title={`${item.title} - Video ${index + 1}`}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Direct Photos Gallery Display */}
       <div className="space-y-6">
@@ -120,7 +155,9 @@ export const FolderDetailTemplate: React.FC<FolderDetailTemplateProps> = ({
                     <h4 className="text-sm font-bold text-slate-900 group-hover:text-purple-700 transition-colors line-clamp-1">
                       {rel.title}
                     </h4>
-                    <span className="text-xs text-slate-600 font-mono font-bold">{rel.imagesCount} Foto</span>
+                    <span className="text-xs text-slate-600 font-mono font-bold">
+                      {rel.imagesCount} Foto{rel.videosCount > 0 ? ` • ${rel.videosCount} Video` : ''}
+                    </span>
                   </div>
                 </div>
               </Link>

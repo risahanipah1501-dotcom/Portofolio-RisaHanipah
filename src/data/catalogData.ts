@@ -10,6 +10,8 @@ export interface CatalogItem {
   coverImage: string;
   imagesCount: number;
   images: string[];
+  videosCount: number;
+  videos: string[];
 }
 
 export const CATALOG_DATA: CatalogItem[] = [
@@ -42,6 +44,11 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/FotoKatalog_Kairo/WhatsApp Image 2026-08-19 at 11.42.53.jpeg",
       "/Katalog/FotoKatalog_Kairo/WhatsApp Image 2026-08-19 at 11.42.54 (1).jpeg",
       "/Katalog/FotoKatalog_Kairo/WhatsApp Image 2026-08-19 at 11.42.54.jpeg"
+    ],
+    "videosCount": 2,
+    "videos": [
+      "/Katalog/FotoKatalog_Kairo/WhatsApp Video 2026-08-21 at 10.20.36 (1).mp4",
+      "/Katalog/FotoKatalog_Kairo/WhatsApp Video 2026-08-21 at 10.20.58.mp4"
     ]
   },
   {
@@ -65,6 +72,10 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.55.jpeg",
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.57 (2).jpeg",
       "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Image 2026-08-19 at 11.42.57 (3).jpeg"
+    ],
+    "videosCount": 1,
+    "videos": [
+      "/Katalog/FotoKatalog_RNW Hijab/WhatsApp Video 2026-08-21 at 10.20.36.mp4"
     ]
   },
   {
@@ -85,7 +96,9 @@ export const CATALOG_DATA: CatalogItem[] = [
     "images": [
       "/Katalog/Muse_Hananidia_mua/WhatsApp Image 2026-08-19 at 11.42.58 (1).jpeg",
       "/Katalog/Muse_Hananidia_mua/WhatsApp Image 2026-08-19 at 11.42.59.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-laelamakeup",
@@ -107,7 +120,9 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Laela.makeup/WhatsApp Image 2026-08-19 at 11.43.04 (2).jpeg",
       "/Katalog/Muse_Laela.makeup/WhatsApp Image 2026-08-19 at 11.43.04 (3).jpeg",
       "/Katalog/Muse_Laela.makeup/WhatsApp Image 2026-08-19 at 11.43.04.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-laelimua",
@@ -132,6 +147,10 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Laeli.mua/WhatsApp Image 2026-08-19 at 11.43.06 (2).jpeg",
       "/Katalog/Muse_Laeli.mua/WhatsApp Image 2026-08-19 at 11.43.06.jpeg",
       "/Katalog/Muse_Laeli.mua/WhatsApp Image 2026-08-19 at 11.43.07.jpeg"
+    ],
+    "videosCount": 1,
+    "videos": [
+      "/Katalog/Muse_Laeli.mua/WhatsApp Video 2026-08-21 at 10.20.59.mp4"
     ]
   },
   {
@@ -158,6 +177,10 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Lidyarachman_/WhatsApp Image 2026-08-19 at 11.43.03 (1).jpeg",
       "/Katalog/Muse_Lidyarachman_/WhatsApp Image 2026-08-19 at 11.43.03 (2).jpeg",
       "/Katalog/Muse_Lidyarachman_/WhatsApp Image 2026-08-19 at 11.43.03.jpeg"
+    ],
+    "videosCount": 1,
+    "videos": [
+      "/Katalog/Muse_Lidyarachman_/WhatsApp Video 2026-08-21 at 10.21.01.mp4"
     ]
   },
   {
@@ -179,6 +202,10 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Makeup_byrisya/WhatsApp Image 2026-08-19 at 11.43.08 (2).jpeg",
       "/Katalog/Muse_Makeup_byrisya/WhatsApp Image 2026-08-19 at 11.43.08 (3).jpeg",
       "/Katalog/Muse_Makeup_byrisya/WhatsApp Image 2026-08-19 at 11.43.09.jpeg"
+    ],
+    "videosCount": 1,
+    "videos": [
+      "/Katalog/Muse_Makeup_byrisya/WhatsApp Video 2026-08-21 at 10.21.01 (1).mp4"
     ]
   },
   {
@@ -199,7 +226,9 @@ export const CATALOG_DATA: CatalogItem[] = [
     "images": [
       "/Katalog/Muse_MarwahMakeup/WhatsApp Image 2026-08-19 at 11.42.58 (2).jpeg",
       "/Katalog/Muse_MarwahMakeup/WhatsApp Image 2026-08-19 at 11.42.58.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-mezzalunamakeup",
@@ -224,7 +253,9 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Mezzaluna.makeup/WhatsApp Image 2026-08-19 at 11.43.07 (2).jpeg",
       "/Katalog/Muse_Mezzaluna.makeup/WhatsApp Image 2026-08-19 at 11.43.08 (1).jpeg",
       "/Katalog/Muse_Mezzaluna.makeup/WhatsApp Image 2026-08-19 at 11.43.08.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-muezzamakeup",
@@ -246,7 +277,9 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Muezzamakeup/WhatsApp Image 2026-08-19 at 11.42.56 (2).jpeg",
       "/Katalog/Muse_Muezzamakeup/WhatsApp Image 2026-08-19 at 11.42.57 (1).jpeg",
       "/Katalog/Muse_Muezzamakeup/WhatsApp Image 2026-08-19 at 11.42.57.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-salmafinamua",
@@ -268,7 +301,9 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Salmafina.mua/WhatsApp Image 2026-08-19 at 11.43.09 (2).jpeg",
       "/Katalog/Muse_Salmafina.mua/WhatsApp Image 2026-08-19 at 11.43.10 (1).jpeg",
       "/Katalog/Muse_Salmafina.mua/WhatsApp Image 2026-08-19 at 11.43.10.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   },
   {
     "id": "muse-tazkhi-adyamakeup",
@@ -291,6 +326,10 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Muse_Tazkhi_adyamakeup/WhatsApp Image 2026-08-19 at 11.43.00 (4).jpeg",
       "/Katalog/Muse_Tazkhi_adyamakeup/WhatsApp Image 2026-08-19 at 11.43.01 (1).jpeg",
       "/Katalog/Muse_Tazkhi_adyamakeup/WhatsApp Image 2026-08-19 at 11.43.01.jpeg"
+    ],
+    "videosCount": 1,
+    "videos": [
+      "/Katalog/Muse_Tazkhi_adyamakeup/WhatsApp Video 2026-08-21 at 10.20.40.mp4"
     ]
   },
   {
@@ -313,7 +352,9 @@ export const CATALOG_DATA: CatalogItem[] = [
       "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.19.jpeg",
       "/Katalog/Self_Makeup/WhatsApp Image 2026-07-31 at 11.40.20.jpeg",
       "/Katalog/Self_Makeup/WhatsApp Image 2026-08-19 at 11.42.56.jpeg"
-    ]
+    ],
+    "videosCount": 0,
+    "videos": []
   }
 ];
 
