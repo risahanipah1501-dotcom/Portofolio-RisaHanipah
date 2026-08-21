@@ -152,7 +152,7 @@ export default function AboutPage() {
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:scale-105"
           >
             <MessageCircle className="w-5 h-5 fill-white" />
-            <span>Hubungi WhatsApp (+62 851-7423-2225)</span>
+            <span>WhatsApp</span>
           </a>
 
           <Link href="/katalog">
